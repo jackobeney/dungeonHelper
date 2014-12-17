@@ -1,0 +1,36 @@
+<template name="enemies">
+
+    <div class="enemy-margin col-sm-3">
+      <div class="card">
+        <div class="stats">
+          <h3>Active Enemies</h3>
+          <ul>
+            {{#each enemy}}
+                <li class="enemy {{selectedEnemyClass}}">
+                {{name}}
+                {{#if showEnemyModifiers}}
+                  <input type="button" class="remove btn-link" value="x">
+                {{/if}}
+                  <ul>
+                    <li>HP: {{health}}
+                      {{#if showEnemyModifiers}}
+                        <button class="enemyIncrement btn-link" value="health">&nbsp;+&nbsp;</button>
+                        <button class="enemyDecrement btn-link" value="health">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Stregnth: {{strength}}
+                      {{#if showEnemyModifiers}}
+                        <button class="enemyIncrement btn-link" value="strength">&nbsp;+&nbsp;</button>
+                        <button class="enemyDecrement btn-link" value="strength">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                  </ul>
+                </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</template>
+

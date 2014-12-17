@@ -1,0 +1,99 @@
+<template name="players">
+
+        <div class="col-sm-9">
+          <div class="card">
+            <ul class="nav nav-tabs">
+              {{#each player}}
+                <li class="player {{selectedPlayerClass}}"><a href="#tab{{name}}" data-toggle="tab">{{name}}</a></li>
+              {{/each}}
+            </ul>
+            <div class="tab-content">
+              {{#each player}}
+                <div class="tab-pane" id="tab{{name}}">
+                  <ul class="stats">
+                    <li>HP: {{health}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="health">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="health">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Amour: {{amour}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="amour">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="amour">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Stregnth: {{strength}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="strength">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="strength">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Intelligence: {{intelligence}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="intelligence">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="intelligence">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Dexterity: {{dexterity}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="dexterity">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="dexterity">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Accuracy: {{accuracy}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="accuracy">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="accuracy">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Melee: {{melee}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="melee">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="melee">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Brawling: {{brawling}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="brawling">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="brawling">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Perception: {{perception}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="perception">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="perception">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Intimidation: {{intimidation}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="intimidation">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="intimidation">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Wisdom: {{wisdom}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="wisdom">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="wisdom">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Charisma: {{charisma}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="charisma">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="charisma">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                    <li>Constitution: {{constitutuion}}
+                      {{#if showPlayerModifiers}}
+                        <button class="playerIncrement btn-link" value="constitutuion">&nbsp;+&nbsp;</button>
+                        <button class="playerDecrement btn-link" value="constitutuion">&nbsp;-</button>
+                      {{/if}}
+                    </li>
+                  </ul>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+</template>
