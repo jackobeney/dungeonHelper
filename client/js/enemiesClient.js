@@ -57,3 +57,13 @@ Template.addEnemy.events({
     Meteor.call('insertEnemyData', enemyName, enemyHealth, enemyStrength);
   }
 });
+
+Template.newEnemyModal.events({
+  'submit form': function(evt) {
+    evt.preventDefault();
+    var enemyName = evt.target.enemyName.value;
+    var enemyHealth = evt.target.enemyHealth.value;
+    var enemyStrength = evt.target.enemyStrength.value;
+    Meteor.call('insertEnemyData', enemyName, enemyHealth, enemyStrength);
+  }
+});

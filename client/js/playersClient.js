@@ -21,6 +21,9 @@ Template.players.helpers({
   'showSelectedPlayer': function() {
     var selectedPlayer = Session.get('selectedPlayer');
     return PlayerList.findOne(selectedPlayer)
+  },
+  'item': function() {
+    return ItemList.find({}, {sort: {name: 1} })
   }
 });
 

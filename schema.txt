@@ -3,3 +3,6 @@ PlayerList.insert({name: "Pilot", health: 21, amour: 1, strength: 11, intelligen
 PlayerList.insert({name: "Security", health: 19, amour: 3, strength: 24, intelligence: 3, dexterity: 12, accuracy: 16, melee: 18, brawling: 16, perception: 10, intimidation: 14, wisdom: 6, charisma: 9, constitutuion: 14} );
 PlayerList.insert({name: "Medic", health: 20, amour: 1, strength: 8, intelligence: 21, dexterity: 18, accuracy: 7, melee: 10, brawling: 18, perception: 12, intimidation: 8, wisdom: 16, charisma: 10, constitutuion: 7} );
 PlayerList.insert({name: "Robot", health: 22, amour: 2, strength: 20, intelligence: 20, dexterity: 13, accuracy: 13, melee: 10, brawling: 10, perception: 18, intimidation: 10, wisdom: 9, charisma: 7, constitutuion: 20} );
+
+ItemList.insert({name: "Blaster", damage: "d6", bonus: "+1 accuracy"} );
+ItemList.insert({name: "Rifle", damage: "d6", bonus: "+2 accuracy, +1 intimidation"} );
