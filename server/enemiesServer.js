@@ -4,12 +4,10 @@ Meteor.publish('theEnemies', function() {
 
 Meteor.methods({
   'insertEnemyData': function(enemyName, enemyHealth, enemyStrength) {
-    var health = parseInt(enemyHealth);
-    var strength = parseInt(enemyStrength);
     EnemyList.insert({
       name: enemyName,
-      health: health,
-      strength: strength
+      health: parseInt(enemyHealth),
+      strength: parseInt(enemyStrength)
     });
   },
   'removeEnemyData': function(selectedEnemy) {

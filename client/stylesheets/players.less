@@ -19,21 +19,35 @@
   border-radius: 3px 3px 0 0;
 }
 
+// .tab-pane:first-of-type {
+//   .active;
+// }
+
 table {
   .stat-value {
     text-align: right;
   }
-}
-
-.bottom-buffer {
-  margin-bottom: 30%;
+  tr:nth-of-type(even) {
+    background-color: #F4F4F4;
+  }
 }
 
 .top-buffer {
   margin-top: 10%;
 }
 
+.bottom-buffer {
+  &:nth-of-type(-n+3) {
+    .top-buffer;
+  }
+  button {
+    text-align: left;
+  }
+  height: 100px;
+}
+
 .item-stats {
   padding-left: 5px;
   font-size: 11px;
+  display: none;
 }

@@ -1,8 +1,127 @@
-PlayerList.insert({name: "Captain", health: 19, amour: 1, strength: 14, intelligence: 7, dexterity: 12, accuracy: 10, melee: 19, brawling: 18, perception: 7, intimidation: 10, wisdom: 18, charisma: 22, constitutuion: 11} );
-PlayerList.insert({name: "Pilot", health: 21, amour: 1, strength: 11, intelligence: 10, dexterity: 23, accuracy: 20, melee: 6, brawling: 8, perception: 10, intimidation: 9, wisdom: 12, charisma: 15, constitutuion: 16} );
-PlayerList.insert({name: "Security", health: 19, amour: 3, strength: 24, intelligence: 3, dexterity: 12, accuracy: 16, melee: 18, brawling: 16, perception: 10, intimidation: 14, wisdom: 6, charisma: 9, constitutuion: 14} );
-PlayerList.insert({name: "Medic", health: 20, amour: 1, strength: 8, intelligence: 21, dexterity: 18, accuracy: 7, melee: 10, brawling: 18, perception: 12, intimidation: 8, wisdom: 16, charisma: 10, constitutuion: 7} );
-PlayerList.insert({name: "Robot", health: 22, amour: 2, strength: 20, intelligence: 20, dexterity: 13, accuracy: 13, melee: 10, brawling: 10, perception: 18, intimidation: 10, wisdom: 9, charisma: 7, constitutuion: 20} );
+PlayerList.insert(
+  {
+    name: "Captain",
+    health: 19,
+    amour: 1,
+    strength: 14,
+    intelligence: 7,
+    dexterity: 12,
+    accuracy: 10,
+    melee: 19,
+    brawling: 18,
+    perception: 7,
+    intimidation: 10,
+    wisdom: 18,
+    charisma: 22,
+    constitution: 11,
+    inventory: [
+      {_id: 1, name: "Blaster", damage: "d6", bonus: "+1 accuracy", buy: 100, sell: 50},
+      {_id: 2, name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
+      {_id: 3, name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
+    ]
+  }
+);
+PlayerList.insert(
+  {
+    name: "Pilot",
+    health: 21,
+    amour: 1,
+    strength: 11,
+    intelligence: 10,
+    dexterity: 23,
+    accuracy: 20,
+    melee: 6,
+    brawling: 8,
+    perception: 10,
+    intimidation: 9,
+    wisdom: 12,
+    charisma: 15,
+    constitution: 16,
+    inventory: [
+      {_id: 1, name: "Exo Arm", damage: "0", bonus: "+2 strength", buy: 100, sell: 50},
+      {_id: 2, name: "Pulse Sensor", damage: "0", bonus: "+3 perception", buy: 100, sell: 50},
+      {_id: 3, name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
+    ]
+  }
+);
+PlayerList.insert(
+  {
+    name: "Security",
+    health: 19,
+    amour: 3,
+    strength: 24,
+    intelligence: 3,
+    dexterity: 12,
+    accuracy: 16,
+    melee: 18,
+    brawling: 16,
+    perception: 10,
+    intimidation: 14,
+    wisdom: 6,
+    charisma: 9,
+    constitution: 14,
+    inventory: [
+      {_id: 1, name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
+      {_id: 2, name: "Zadium Gauntlets", damage: "d6", bonus: "+2 brawling", buy: 100, sell: 50},
+      {_id: 3, name: "Augmented Eye", damage: "0", bonus: "+2 perception, +1 accuracy", buy: 100, sell: 50}
+    ]
+  }
+);
+PlayerList.insert(
+  {
+    name: "Medic",
+    health: 20,
+    amour: 1,
+    strength: 8,
+    intelligence: 21,
+    dexterity: 18,
+    accuracy: 7,
+    melee: 10,
+    brawling: 18,
+    perception: 12,
+    intimidation: 8,
+    wisdom: 16,
+    charisma: 10,
+    constitution: 7,
+    inventory: [
+      {_id: 1, name: "Blaster", damage: "d6", bonus: "+1 accuracy", buy: 100, sell: 50},
+      {_id: 2, name: "Augmented Eye", damage: "0", bonus: "+2 perception, +1 accuracy", buy: 100, sell: 50},
+      {_id: 3, name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50}
+    ]
+  }
+);
+PlayerList.insert(
+  {
+    name: "Robot",
+    health: 22,
+    amour: 2,
+    strength: 20,
+    intelligence: 20,
+    dexterity: 13,
+    accuracy: 13,
+    melee: 10,
+    brawling: 10,
+    perception: 18,
+    intimidation: 10,
+    wisdom: 9,
+    charisma: 7,
+    constitution: 20,
+    inventory: [
+      {_id: 1, name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50},
+      {_id: 2, name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
+      {_id: 3, name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
+    ]
+  }
+);
 
-ItemList.insert({name: "Blaster", damage: "d6", bonus: "+1 accuracy"} );
-ItemList.insert({name: "Rifle", damage: "d6", bonus: "+2 accuracy, +1 intimidation"} );
+ItemList.insert(
+  {name: "Blaster", damage: "d6", bonus: "+1 accuracy", buy: 100, sell: 50},
+  {name: "Rifle", damage: "d6", bonus: "+2 accuracy, +1 intimidation", buy: 100, sell: 50},
+  {name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
+  {name: "Zadium Gauntlets", damage: "d6", bonus: "+2 brawling", buy: 100, sell: 50},
+  {name: "Augmented Eye", damage: "0", bonus: "+2 perception, +1 accuracy", buy: 100, sell: 50},
+  {name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50},
+  {name: "Exo Arm", damage: "0", bonus: "+2 strength", buy: 100, sell: 50},
+  {name: "Pulse Sensor", damage: "0", bonus: "+3 perception", buy: 100, sell: 50},
+  {name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
+);

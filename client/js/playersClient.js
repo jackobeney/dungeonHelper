@@ -1,8 +1,7 @@
 Meteor.subscribe('thePlayers');
 
-var i = 1;
-
 Template.players.helpers({
+
   'player': function() {
     return PlayerList.find({}, {sort: {name: 1} })
   },
@@ -22,12 +21,14 @@ Template.players.helpers({
     var selectedPlayer = Session.get('selectedPlayer');
     return PlayerList.findOne(selectedPlayer)
   },
-  'item': function() {
-    return ItemList.find({}, {sort: {name: 1} })
+  'dungeonMaster': function() {
+    console.log("hello");
+    return this.Accounts.connection._userId == "ejXnEhiTn66HsAvkB";
   }
 });
 
 Template.players.events({
+
   'click .player': function() {
     var playerId = this._id;
     Session.set('selectedPlayer', playerId);
@@ -41,15 +42,12 @@ Template.players.events({
     var selectedPlayer = Session.get('selectedPlayer');
     var selectedStat = evt.target.value;
     Meteor.call('modifyPlayerStat', selectedPlayer, selectedStat, -1);
+  },
+  'click .itemStats' : function(evt){
+    if( $("#"+this._id+"Stats").is(":hidden") ) {
+        $("#"+this._id+"Stats").slideDown("fast")
+    } else {
+      $("#"+this._id+"Stats").slideUp("fast");
+    }
   }
 });
-
-// Template.addPlayer.events({
-//   'submit form': function(evt) {
-//     evt.preventDefault();
-//     var playerName = evt.target.playerName.value;
-//     var playerHealth = evt.target.playerHealth.value;
-//     var playerStrength = evt.target.playerStrength.value;
-//     Meteor.call('insertPlayerData', playerName, playerHealth, playerStrength);
-//   }
-// });

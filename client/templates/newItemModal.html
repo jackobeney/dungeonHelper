@@ -1,0 +1,43 @@
+<template name="newItemModal">
+
+  <div class="modal" id="new-item" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Add new item</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input class="form-control" type="text" name="itemName" id="inputName">
+            </div>
+            <div class="form-group">
+              <label for="inputDamage">Damage</label>
+              <input class="form-control" type="text" name="itemDamage" id="inputDamage">
+            </div>
+            <div class="form-group">
+              <label for="inputBonus">Bonus</label>
+              <input class="form-control" type="text" name="itemBonus" id="inputBonus">
+            </div>
+            <div class="form-group">
+              <label for="buyValue">Buy Value</label>
+              <input class="form-control" type="text" name="buyValue" id="buyValue">
+            </div>
+            <div class="form-group">
+              <label for="sellValue">Sell Value</label>
+              <input class="form-control" type="text" name="sellValue" id="sellValue">
+            </div>
+            <div class="form-group modal-submit">
+              <button class="btn btn-primary" type="submit" value="Add Item">Add Item</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
