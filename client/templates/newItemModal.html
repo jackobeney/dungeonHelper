@@ -9,6 +9,14 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
+              <label for="inputPlayerName">Player</label>
+              <select class="form-control">
+                {{#each player}}
+                  <option>{{name}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
               <label for="inputName">Name</label>
               <input class="form-control" type="text" name="itemName" id="inputName">
             </div>

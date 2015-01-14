@@ -1,10 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Electrolize);
+
 html{
-  font-family: 'Helvetica', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
-  background-color: #E0E0E0;
+  font-family: 'Electrolize', sans-serif;
+  background-color: #141414;
 }
 
 header {
@@ -12,8 +14,8 @@ header {
     padding-top: 25px;
     margin: 0;
   }
-  background-color: #009688;
-  color: #E0E0E0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
   height: 100px;
   text-align: center;
 }
@@ -25,16 +27,14 @@ nav {
     padding-bottom: 12px;
     padding-top: 12px;
   }
+  color: #2c3e50;
   position: relative;
-  background-color: #00897B;
+  background-color: rgba(255, 255, 255, 0.8);
   text-align : center;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow:0px 2px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 2px 1px rgba(0,0,0,0.2);
 }
 
 h3 {
@@ -49,7 +49,7 @@ ul {
 
 a {
   &:hover {
-    color: #E0E0E0;
+    color: #2c3e50;
     text-decoration: none !important;
   }
   &:active {
@@ -58,7 +58,7 @@ a {
   &:focus {
     color: #fff;
   }
-  color: #E0E0E0;
+  color: #2c3e50;
   text-decoration: none !important;
   font-size: 14px;
   font-weight: 500;
@@ -83,7 +83,7 @@ a {
 .card {
   color: #2c3e50;
   margin-bottom: 10px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -155,3 +155,54 @@ a {
 button:focus, input:focus{
   outline: 0;
 }
+
+/* Stars
+------------------------------------- */
+
+#space, .stars {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stars {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #eee, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #eee, rgba(0,0,0,0)),
+    radial-gradient(4px 4px at 130px 80px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+.stars:nth-child(1) {
+  background-position: 60% 50%;
+  transform: rotate(45deg);
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  transform: rotate(20deg);
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+}
+.stars:nth-child(4) {
+  background-position: 40% -70%;
+  transform: rotate(29deg);
+}
+.stars:nth-child(5) {
+  background-position: -26% 39%;
+}
+
+//****MOBILE STYLES****
+// @media only screen and (max-width : 400px) {
+//   .card {
+
+//   }
+// }

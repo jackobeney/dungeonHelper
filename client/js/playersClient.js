@@ -5,6 +5,9 @@ Template.players.helpers({
   'player': function() {
     return PlayerList.find({}, {sort: {name: 1} })
   },
+  'item': function() {
+    return ItemList.find({}, {sort: {player: 1} })
+  },
   'selectedPlayerClass': function() {
     var playerId = this._id;
     var selectedPlayer = Session.get('selectedPlayer');

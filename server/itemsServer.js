@@ -3,8 +3,9 @@ Meteor.publish('theItems', function() {
 });
 
 Meteor.methods({
-  'insertItemData': function(itemName, itemDamage, itemBonus, buyValue, sellValue) {
+  'insertItemData': function(playerName, itemName, itemDamage, itemBonus, buyValue, sellValue) {
     ItemList.insert({
+      player: playerName,
       name: itemName,
       damage: itemDamage,
       bonus: itemBonus,
