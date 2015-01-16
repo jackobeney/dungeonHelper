@@ -1,3 +1,41 @@
 <head>
   <title>dungeonHelper</title>
 </head>
+<body>
+  <header>
+    {{> loginButtons}}
+    <h1>Dungeon Helper</h1>
+  </header>
+
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+
+  {{#if currentUser}}
+    <nav>
+      <div class="menu">
+        <ul>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Add Enemy&nbsp;<b class="caret"></b></a>
+            {{> addEnemy}}
+          </li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Lore</a></li>
+          <li><a href="#">Guide</a></li>
+        </ul>
+      </div>
+    </nav>
+    {{> newEnemyModal}}
+    {{> newItemModal}}
+
+    <div class="row">
+      {{> enemies}}
+      {{> players}}
+    </div>
+
+  {{else}}
+    <h1 class="logged-out">PLEASE LOG IN</h1>
+  {{/if}}
+
+</body>
