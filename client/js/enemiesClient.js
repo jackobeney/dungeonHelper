@@ -48,7 +48,7 @@ Template.enemies.events({
   }
 });
 
-Template.addEnemy.events({
+Template.enemyMenu.events({
   'submit form': function(evt) {
     evt.preventDefault();
     var enemyName = evt.target.enemyName.value;

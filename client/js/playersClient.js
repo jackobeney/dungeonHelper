@@ -5,9 +5,6 @@ Template.players.helpers({
   'player': function() {
     return PlayerList.find({}, {sort: {name: 1} })
   },
-  'item': function() {
-    return ItemList.find({}, {sort: {player: 1} })
-  },
   'selectedPlayerClass': function() {
     var playerId = this._id;
     var selectedPlayer = Session.get('selectedPlayer');
@@ -52,5 +49,33 @@ Template.players.events({
     } else {
       $("#"+this._id+"Stats").slideUp("fast");
     }
+  }
+});
+
+Template.newItemModal.events({
+  'submit form': function(evt) {
+    evt.preventDefault();
+    var playerName = evt.target.playerName.value;
+    var itemId = evt.target.itemId.value;
+    var itemName = evt.target.itemName.value;
+    var itemDamage = evt.target.itemDamage.value;
+    var itemBonus = evt.target.itemBonus.value;
+    var buyValue = evt.target.buyValue.value;
+    var sellValue = evt.target.sellValue.value;
+    Meteor.call('insertItemData', playerName, itemId, itemName, itemDamage, itemBonus, buyValue, sellValue);
+  }
+});
+
+Template.existingItemModal.events({
+  'submit form': function(evt) {
+    evt.preventDefault();
+    var playerName = evt.target.playerName.value;
+    var itemId = evt.target.itemId.value;
+    var itemName = evt.target.itemName.value;
+    var itemDamage = evt.target.itemDamage.value;
+    var itemBonus = evt.target.itemBonus.value;
+    var buyValue = evt.target.buyValue.value;
+    var sellValue = evt.target.sellValue.value;
+    Meteor.call('insertItemData', playerName, itemId, itemName, itemDamage, itemBonus, buyValue, sellValue);
   }
 });

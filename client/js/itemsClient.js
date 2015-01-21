@@ -14,18 +14,18 @@ Template.newItemModal.helpers({
   }
 });
 
-Template.newItemModal.events({
-  'submit form': function(evt) {
-    evt.preventDefault();
-    var playerName = evt.target.playerName.value;
-    var itemName = evt.target.itemName.value;
-    var itemDamage = evt.target.itemDamage.value;
-    var itemBonus = evt.target.itemBonus.value;
-    var buyValue = evt.target.buyValue.value;
-    var sellValue = evt.target.sellValue.value;
-    Meteor.call('insertItemData', playerName, itemName, itemDamage, itemBonus, buyValue, sellValue);
-  }
-});
+// Template.newItemModal.events({
+//   'submit form': function(evt) {
+//     evt.preventDefault();
+//     var playerName = evt.target.playerName.value;
+//     var itemName = evt.target.itemName.value;
+//     var itemDamage = evt.target.itemDamage.value;
+//     var itemBonus = evt.target.itemBonus.value;
+//     var buyValue = evt.target.buyValue.value;
+//     var sellValue = evt.target.sellValue.value;
+//     Meteor.call('insertItemData', playerName, itemName, itemDamage, itemBonus, buyValue, sellValue);
+//   }
+// });
 
 // Template.newItemModal.events({
 //   'submit form': function(evt) {

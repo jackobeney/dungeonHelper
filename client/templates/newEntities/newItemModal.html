@@ -10,23 +10,27 @@
           <form>
             <div class="form-group">
               <label for="inputPlayerName">Player</label>
-              <select class="form-control">
+              <select class="form-control" name="playerName" id="playerName">
                 {{#each player}}
                   <option>{{name}}</option>
                 {{/each}}
               </select>
             </div>
             <div class="form-group">
+              <label for="inputId">Item ID</label>
+              <input class="form-control" type="text" placeholder="eg. captainBlaster" name="itemId" id="inputId">
+            </div>
+            <div class="form-group">
               <label for="inputName">Name</label>
-              <input class="form-control" type="text" name="itemName" id="inputName">
+              <input class="form-control" type="text" placeholder="eg. Blaster" name="itemName" id="inputName">
             </div>
             <div class="form-group">
               <label for="inputDamage">Damage</label>
-              <input class="form-control" type="text" name="itemDamage" id="inputDamage">
+              <input class="form-control" type="text" placeholder="eg. 2d6" name="itemDamage" id="inputDamage">
             </div>
             <div class="form-group">
               <label for="inputBonus">Bonus</label>
-              <input class="form-control" type="text" name="itemBonus" id="inputBonus">
+              <input class="form-control" type="text" placeholder="eg. +1 accuracy" name="itemBonus" id="inputBonus">
             </div>
             <div class="form-group">
               <label for="buyValue">Buy Value</label>

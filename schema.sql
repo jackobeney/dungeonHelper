@@ -14,11 +14,7 @@ PlayerList.insert(
     wisdom: 18,
     charisma: 22,
     constitution: 11,
-    inventory: [
-      {_id: 'captain1', name: "Blaster", damage: "d6", bonus: "+1 accuracy", buy: 100, sell: 50},
-      {_id: 'captain2', name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
-      {_id: 'captain3', name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
-    ]
+    inventory: []
   }
 );
 PlayerList.insert(
@@ -37,11 +33,7 @@ PlayerList.insert(
     wisdom: 12,
     charisma: 15,
     constitution: 16,
-    inventory: [
-      {_id: 'pilot1', name: "Exo Arm", damage: "0", bonus: "+2 strength", buy: 100, sell: 50},
-      {_id: 'pilot2', name: "Pulse Sensor", damage: "0", bonus: "+3 perception", buy: 100, sell: 50},
-      {_id: 'pilot3', name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
-    ]
+    inventory: []
   }
 );
 PlayerList.insert(
@@ -60,11 +52,7 @@ PlayerList.insert(
     wisdom: 6,
     charisma: 9,
     constitution: 14,
-    inventory: [
-      {_id: 'security1', name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
-      {_id: 'security2', name: "Zadium Gauntlets", damage: "d6", bonus: "+2 brawling", buy: 100, sell: 50},
-      {_id: 'security3', name: "Augmented Eye", damage: "0", bonus: "+2 perception, +1 accuracy", buy: 100, sell: 50}
-    ]
+    inventory: []
   }
 );
 PlayerList.insert(
@@ -83,11 +71,7 @@ PlayerList.insert(
     wisdom: 16,
     charisma: 10,
     constitution: 7,
-    inventory: [
-      {_id: 'medic1', name: "Blaster", damage: "d6", bonus: "+1 accuracy", buy: 100, sell: 50},
-      {_id: 'medic2', name: "Augmented Eye", damage: "0", bonus: "+2 perception, +1 accuracy", buy: 100, sell: 50},
-      {_id: 'medic3', name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50}
-    ]
+    inventory: []
   }
 );
 PlayerList.insert(
@@ -106,11 +90,7 @@ PlayerList.insert(
     wisdom: 9,
     charisma: 7,
     constitution: 20,
-    inventory: [
-      {_id: 'robot1', name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50},
-      {_id: 'robot2', name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
-      {_id: 'robot3', name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
-    ]
+    inventory: []
   }
 );
 
