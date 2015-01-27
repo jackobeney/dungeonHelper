@@ -21,9 +21,20 @@ Template.players.helpers({
     var selectedPlayer = Session.get('selectedPlayer');
     return PlayerList.findOne(selectedPlayer)
   },
+  'showItemModifiers' : function() {
+    var itemId = this._id;
+    var selectedItem = Session.get('selectedItem');
+    return itemId == selectedItem
+  },
   'dungeonMaster': function() {
     console.log("hello");
     return this.Accounts.connection._userId == "ejXnEhiTn66HsAvkB";
+  }
+});
+
+Template.existingItemModal.helpers({
+  'player': function() {
+    return PlayerList.find({}, {sort: {name: 1} })
   }
 });
 
@@ -32,6 +43,10 @@ Template.players.events({
   'click .player': function() {
     var playerId = this._id;
     Session.set('selectedPlayer', playerId);
+  },
+  'click .item': function() {
+    var itemId = this._id;
+    Session.set('selectedItem', itemId);
   },
   'click .playerIncrement': function(evt) {
     var selectedPlayer = Session.get('selectedPlayer');
@@ -43,13 +58,18 @@ Template.players.events({
     var selectedStat = evt.target.value;
     Meteor.call('modifyPlayerStat', selectedPlayer, selectedStat, -1);
   },
-  'click .itemStats' : function(evt){
-    if( $("#"+this._id+"Stats").is(":hidden") ) {
-        $("#"+this._id+"Stats").slideDown("fast")
-    } else {
-      $("#"+this._id+"Stats").slideUp("fast");
-    }
+  'click .remove': function() {
+    var selectedItem = Session.get('selectedItem');
+    var selectedPlayer = Session.get('selectedPlayer');
+    Meteor.call('removeItemData', selectedItem, selectedPlayer);
   }
+  // 'click .itemStats' : function(evt){
+  //   if( $("#"+this._id+"Stats").is(":hidden") ) {
+  //       $("#"+this._id+"Stats").slideDown("fast")
+  //   } else {
+  //     $("#"+this._id+"Stats").slideUp("fast");
+  //   }
+  // }
 });
 
 Template.newItemModal.events({

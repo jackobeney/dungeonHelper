@@ -1,6 +1,7 @@
 PlayerList.insert(
   {
     name: "Captain",
+    credits: 1000,
     health: 19,
     amour: 1,
     strength: 14,
@@ -20,6 +21,7 @@ PlayerList.insert(
 PlayerList.insert(
   {
     name: "Pilot",
+    credits: 1000,
     health: 21,
     amour: 1,
     strength: 11,
@@ -39,6 +41,7 @@ PlayerList.insert(
 PlayerList.insert(
   {
     name: "Security",
+    credits: 1000,
     health: 19,
     amour: 3,
     strength: 24,
@@ -58,6 +61,7 @@ PlayerList.insert(
 PlayerList.insert(
   {
     name: "Medic",
+    credits: 1000,
     health: 20,
     amour: 1,
     strength: 8,
@@ -77,6 +81,7 @@ PlayerList.insert(
 PlayerList.insert(
   {
     name: "Robot",
+    credits: 1000,
     health: 22,
     amour: 2,
     strength: 20,
@@ -95,13 +100,29 @@ PlayerList.insert(
 );
 
 ItemList.insert(
-  {name: "Blaster", damage: "d6", bonus: "+1 accuracy", buy: 100, sell: 50},
-  {name: "Rifle", damage: "d6", bonus: "+2 accuracy, +1 intimidation", buy: 100, sell: 50},
-  {name: "Sword", damage: "d6", bonus: "+1 melee", buy: 100, sell: 50},
-  {name: "Zadium Gauntlets", damage: "d6", bonus: "+2 brawling", buy: 100, sell: 50},
-  {name: "Augmented Eye", damage: "0", bonus: "+2 perception, +1 accuracy", buy: 100, sell: 50},
-  {name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50},
-  {name: "Exo Arm", damage: "0", bonus: "+2 strength", buy: 100, sell: 50},
-  {name: "Pulse Sensor", damage: "0", bonus: "+3 perception", buy: 100, sell: 50},
+  {name: "Blaster", damage: "1d6", bonus: "+1 accuracy", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Rifle", damage: "1d6", bonus: "+2 accuracy", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Sword", damage: "1d6", bonus: "+1 melee", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Zadium Gauntlets", damage: "1d6", bonus: "+2 brawling", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Augmented Eye", damage: "0", bonus: "+2 perception", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Mark V Chestplate", damage: "0", bonus: "+2 amour", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Exo Arm", damage: "0", bonus: "+2 strength", buy: 100, sell: 50}
+);
+ItemList.insert(
+  {name: "Pulse Sensor", damage: "0", bonus: "+3 perception", buy: 100, sell: 50}
+);
+ItemList.insert(
   {name: "Wikipad", damage: "0", bonus: "+2 intelligence", buy: 100, sell: 50}
 );

@@ -1,39 +1,44 @@
 <template name="existingItemModal">
 
-  <div class="modal" id="new-item" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Add {{name}}</h3>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="inputPlayerName">Player</label>
-              <select class="form-control" name="playerName" id="playerName">
-                {{#each player}}
-                  <option>{{name}}</option>
-                {{/each}}
-              </select>
-            </div>
+  {{#each item}}
+    <div class="modal" id="new-{{_id}}" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Add {{name}}</h3>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="inputPlayerName">Player</label>
+                <select class="form-control" name="playerName" id="playerName">
+                  {{#each player}}
+                    <option>{{name}}</option>
+                  {{/each}}
+                </select>
+              </div>
 
-              <input class="form-control" type="hidden" name="itemId" id="inputId" value="{{_id}}">
-              <input class="form-control" type="hidden" name="itemName" id="inputName" value="{{name}}">
-              <input class="form-control" type="hidden" name="itemDamage" id="inputDamage" value="{{damage}}">
-              <input class="form-control" type="hidden" name="itemBonus" id="inputBonus" value="{{bonus}}">         
-              <input class="form-control" type="hidden" name="buyValue" id="buyValue" value="{{buy}}">
-              <input class="form-control" type="hidden" name="sellValue" id="sellValue" value="{{sell}}">
+                <div class="form-group">
+                  <label for="inputId">Item ID</label>
+                  <input class="form-control" type="text" placeholder="eg. captainBlaster" name="itemId" id="inputId">
+                </div>
+                <input class="form-control" type="hidden" name="itemName" id="inputName" value="{{name}}">
+                <input class="form-control" type="hidden" name="itemDamage" id="inputDamage" value="{{damage}}">
+                <input class="form-control" type="hidden" name="itemBonus" id="inputBonus" value="{{bonus}}">         
+                <input class="form-control" type="hidden" name="buyValue" id="buyValue" value="{{buy}}">
+                <input class="form-control" type="hidden" name="sellValue" id="sellValue" value="{{sell}}">
 
-            <div class="form-group modal-submit">
-              <button class="btn btn-primary" type="submit" value="Add Item">Add Item</button>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+              <div class="form-group modal-submit">
+                <button class="btn btn-primary" type="submit" value="Add Item">Buy Item - {{buy}}&#162;</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {{/each}}
 
 </template>

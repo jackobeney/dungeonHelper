@@ -21,8 +21,14 @@ Meteor.methods({
     PlayerList.update(selectedPlayer, {$inc: query });
   },
   'insertItemData': function(playerName, itemId, itemName, itemDamage, itemBonus, buyValue, sellValue) {
+    var buyAmount = {};
+    buyAmount['credits'] = buyValue * -1;
     var query = {};
-    query["inventory"] = {_id: itemId, name: itemName, damage: itemDamage, bonus: itemBonus, buy: buyValue, sell: sellValue};
+    query['inventory'] = {_id: itemId, name: itemName, damage: itemDamage, bonus: itemBonus, buy: buyValue, sell: sellValue};
     PlayerList.update({name: playerName}, {$addToSet: query });
-  }
+    PlayerList.update({name: playerName}, {$inc: buyAmount });    
+  },
+  'removeItemData': function(selectedItem, selectedPlayer) {
+    PlayerList.update({_id: selectedPlayer}, {$pull: { 'inventory': { _id: selectedItem } } });
+  },
 });

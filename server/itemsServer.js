@@ -13,9 +13,9 @@ Meteor.methods({
   //     sell: parseInt(sellValue)
   //   });
   // },
-  'removeItemData': function(selectedItem) {
-    ItemList.remove(selectedItem);
-  },
+  // 'removeItemData': function(selectedItem) {
+  //   ItemList.remove(selectedItem);
+  // },
   'modifyItemStat': function(selectedItem, selectedStat, amount) {
     var query = {};
     query[selectedStat] = amount;

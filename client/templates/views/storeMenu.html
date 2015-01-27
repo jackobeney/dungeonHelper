@@ -1,6 +1,10 @@
 <template name="storeMenu">
 
   <ul class="dropdown-menu">
+  	{{#each item}}
+			<li><a href="#new-{{_id}}" data-toggle="modal">{{name}}</a></li>
+		{{/each}}
+  	<li role="presentation" class="divider"></li>
     <li><a href="#new-item" data-toggle="modal">New Item</a></li>
   </ul>
 

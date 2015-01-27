@@ -1,6 +1,6 @@
 <template name="players">
 
-  <div class="col-sm-9 col-xs-12">
+  <div class=" col-xs-12 col-sm-9">
     <div class="card">
       <ul class="nav nav-tabs">
         {{#each player}}
@@ -13,6 +13,10 @@
             <div class="table-responsive col-sm-4">
               <table class="table">
                 <tbody>
+                <tr>
+                    <td>Credits: </td>
+                    <td class="stat-value">{{credits}}&#162;</td>
+                  </tr>
                   <tr>
                     <td>HP: </td>
                     <td class="stat-value">{{health}}</td>
@@ -120,20 +124,25 @@
                 </tbody>
               </table>
             </div>
-            {{#each inventory}}
-              <div class="col-sm-8">
-                <div class="row">
-                  <div class="col-sm-4 bottom-buffer">
-                    <button class="btn-link itemStats" id="{{_id}}">{{name}}</button>
+
+            <div class="col-sm-8">
+              <div class="row">
+                {{#each inventory}}
+                  <div class="item col-sm-4 bottom-buffer">
+                    {{#if showItemModifiers}}
+                      <input type="button" class="remove btn-link" value="x">
+                    {{/if}}
+                    <h4 class="itemStats" id="{{_id}}">{{name}}</h4>
                     <ul class="item-stats" id="{{_id}}Stats">
                       <li>Damage: {{damage}}</li>
                       <li>Bonus: {{bonus}}</li>
                       <li>Value: {{sell}}&#162;</li>
                     </ul>
                   </div>
-                </div>
+                {{/each}}
               </div>
-            {{/each}}
+            </div>
+
           </div>
         {{/each}}
       </div>

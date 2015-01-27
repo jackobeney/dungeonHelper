@@ -1,16 +1,23 @@
 Meteor.subscribe('theItems');
 
-// Template.items.helpers({
-
-//  'item': function() {
-//     return ItemList.find()
-//   }
-
-// });
-
 Template.newItemModal.helpers({
   'player': function() {
     return PlayerList.find({}, {sort: {name: 1} })
+  }
+});
+
+Template.existingItemModal.helpers({
+  'item': function() {
+    return ItemList.find({}, {sort: {name: 1} })
+  },
+  'log': function(i) {
+		return console.log(i);
+	}
+});
+
+Template.storeMenu.helpers({
+  'item': function() {
+    return ItemList.find({}, {sort: {name: 1} })
   }
 });
 
