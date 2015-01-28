@@ -31,4 +31,10 @@ Meteor.methods({
   'removeItemData': function(selectedItem, selectedPlayer) {
     PlayerList.update({_id: selectedPlayer}, {$pull: { 'inventory': { _id: selectedItem } } });
   },
+  'sellItem': function(selectedItem, selectedItemValue, selectedPlayer) {
+    var sellAmount = {};
+    sellAmount['credits'] = parseInt(selectedItemValue);
+    PlayerList.update({_id: selectedPlayer}, {$pull: { 'inventory': { _id: selectedItem } } });
+    PlayerList.update({_id: selectedPlayer}, {$inc: sellAmount });
+  },
 });

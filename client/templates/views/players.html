@@ -1,12 +1,14 @@
 <template name="players">
 
-  <div class=" col-xs-12 col-sm-9">
+  <div class="players col-xs-12 col-sm-9">
     <div class="card">
       <ul class="nav nav-tabs">
         {{#each player}}
           <li class="player"><a href="#tab{{name}}" data-toggle="tab">{{name}}</a></li>
         {{/each}}
       </ul>
+
+      <!-- PLAYER STATS -->
       <div class="tab-content row">
         {{#each player}}
           <div class="tab-pane" id="tab{{name}}">
@@ -14,8 +16,8 @@
               <table class="table">
                 <tbody>
                 <tr>
-                    <td>Credits: </td>
-                    <td class="stat-value">{{credits}}&#162;</td>
+                    <td class="credits">Credits: </td>
+                    <td class="stat-value credits">{{credits}}&#162;</td>
                   </tr>
                   <tr>
                     <td>HP: </td>
@@ -125,12 +127,14 @@
               </table>
             </div>
 
+            <!-- PLAYER INVENTORY -->
             <div class="col-sm-8">
               <div class="row">
                 {{#each inventory}}
                   <div class="item col-sm-4 bottom-buffer">
                     {{#if showItemModifiers}}
                       <input type="button" class="remove btn-link" value="x">
+                      <input type="button" class="sellItem btn-link" value="&#162;">
                     {{/if}}
                     <h4 class="itemStats" id="{{_id}}">{{name}}</h4>
                     <ul class="item-stats" id="{{_id}}Stats">

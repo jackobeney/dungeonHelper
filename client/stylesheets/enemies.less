@@ -6,13 +6,30 @@
   font-size: 16px;
 }
 
-.remove {
-  float: right;
-}
-
 .modal-submit {
   button {
     width: 30%;
   }
   margin-bottom: 0;
+}
+
+// ****MOBILE STYLES****
+@media only screen and (max-width : 650px) {
+  .enemies {
+    h3 {
+      font-size: 24px;
+    }
+    li {
+      line-height: 1.8em;
+    }    
+    .remove {
+      display: none;
+    }
+    .enemy {
+      ul {
+        display: none;
+      }
+    }
+    font-size: 20px;
+  }
 }

@@ -46,7 +46,9 @@ Template.players.events({
   },
   'click .item': function() {
     var itemId = this._id;
+    var itemValue = this.sell;
     Session.set('selectedItem', itemId);
+    Session.set('selectedItemValue', itemValue);
   },
   'click .playerIncrement': function(evt) {
     var selectedPlayer = Session.get('selectedPlayer');
@@ -62,6 +64,12 @@ Template.players.events({
     var selectedItem = Session.get('selectedItem');
     var selectedPlayer = Session.get('selectedPlayer');
     Meteor.call('removeItemData', selectedItem, selectedPlayer);
+  },
+  'click .sellItem': function() {
+    var selectedItem = Session.get('selectedItem');
+    var selectedItemValue = Session.get('selectedItemValue');
+    var selectedPlayer = Session.get('selectedPlayer');
+    Meteor.call('sellItem', selectedItem, selectedItemValue, selectedPlayer);
   }
   // 'click .itemStats' : function(evt){
   //   if( $("#"+this._id+"Stats").is(":hidden") ) {

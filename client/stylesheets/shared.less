@@ -100,6 +100,15 @@ a {
   padding: 10px;
 }
 
+.remove {
+  float: right;
+}
+
+.sellItem {
+  float: right;
+  margin-right: 15px;
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -183,27 +192,37 @@ button:focus, input:focus{
 
 .stars:nth-child(1) {
   background-position: 60% 50%;
-  transform: rotate(45deg);
+  transform: rotate(35deg);
 }
 .stars:nth-child(2) {
   background-position: 20% 60%;
-  transform: rotate(20deg);
+  transform: rotate(100deg);
 }
 .stars:nth-child(3) {
-  background-position: -20% -30%;
+  background-position: -20% -39%;
+  // transform: rotate(270deg);
 }
 .stars:nth-child(4) {
-  background-position: 40% -70%;
-  transform: rotate(29deg);
+  background-position: 56% -70%;
+  transform: rotate(180deg);
 }
 .stars:nth-child(5) {
-  background-position: -26% 39%;
+  background-position: -40% 39%;
 }
 
 // ****MOBILE STYLES****
-// @media only screen and (max-width : 400px) {
-//   .card {
-    
+@media only screen and (max-width : 650px) {
+  .modal-submit {
+    button {
+      width: auto;
+    }
+  }
 
-//   }
-// }
+  .enemy-dropdown {
+    display: none !important;
+  }
+
+  .menu li {
+    width: 90px;
+  }
+}
