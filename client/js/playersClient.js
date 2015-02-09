@@ -27,8 +27,8 @@ Template.players.helpers({
     return itemId == selectedItem
   },
   'dungeonMaster': function() {
-    console.log("hello");
-    return this.Accounts.connection._userId == "ejXnEhiTn66HsAvkB";
+    console.log(window.Accounts.connection._userId);
+    // return this.Accounts.connection._userId == "ejXnEhiTn66HsAvkB";
   }
 });
 
@@ -71,13 +71,6 @@ Template.players.events({
     var selectedPlayer = Session.get('selectedPlayer');
     Meteor.call('sellItem', selectedItem, selectedItemValue, selectedPlayer);
   }
-  // 'click .itemStats' : function(evt){
-  //   if( $("#"+this._id+"Stats").is(":hidden") ) {
-  //       $("#"+this._id+"Stats").slideDown("fast")
-  //   } else {
-  //     $("#"+this._id+"Stats").slideUp("fast");
-  //   }
-  // }
 });
 
 Template.newItemModal.events({
